@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+</head>
+<body>
+
+<h2>Notes App</h2>
+
+<textarea id="note" rows="5" cols="30"
+placeholder="Write your note"></textarea>
+
+<br><br>
+
+<button onclick="saveNote()">Save Note</button>
+<button onclick="clearNote()">Clear Note</button>
+
+<p id="result"></p>
+
+<script>
+function saveNote() {
+    let note = document.getElementById("note").value;
+
+    localStorage.setItem("note", note);
+
+    document.getElementById("result").innerHTML =
+        "Note saved successfully";
+}
+
+function clearNote() {
+    localStorage.removeItem("note");
+
+    document.getElementById("note").value = "";
+
+    document.getElementById("result").innerHTML =
+        "Note cleared";
+}
+
+let savedNote = localStorage.getItem("note");
+
+if (savedNote) {
+    document.getElementById("note").value = savedNote;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program 4</title>
+</head>
+<body>
+
+<h1>JavaScript Program 4</h1>
+
+<p>Write a program to check whether a number is even or odd.</p>
+
+<input type="number" id="number" placeholder="Enter a number">
+
+<button onclick="checkEvenOdd()">Check</button>
+
+<p id="output"></p>
+
+<script>
+function checkEvenOdd() {
+    let number = Number(document.getElementById("number").value);
+
+    if (number % 2 === 0) {
+        document.getElementById("output").innerHTML =
+            number + " is Even";
+    } else {
+        document.getElementById("output").innerHTML =
+            number + " is Odd";
+    }
+}
+</script>
+
+</body>
+</html>

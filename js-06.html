@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program 6</title>
+</head>
+<body>
+
+<h1>JavaScript Program 6</h1>
+
+<p>Write a program to find the factorial of a number.</p>
+
+<input type="number" id="number" placeholder="Enter a number">
+
+<button onclick="findFactorial()">Find Factorial</button>
+
+<p id="output"></p>
+
+<script>
+function findFactorial() {
+    let number = Number(document.getElementById("number").value);
+    let factorial = 1;
+
+    for (let i = 1; i <= number; i++) {
+        factorial = factorial * i;
+    }
+
+    document.getElementById("output").innerHTML =
+        "Factorial = " + factorial;
+}
+</script>
+
+</body>
+</html>

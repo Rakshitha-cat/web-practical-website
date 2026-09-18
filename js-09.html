@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program 9</title>
+</head>
+<body>
+
+<h1>JavaScript Program 9</h1>
+
+<p>Write a program to check whether a number is a palindrome.</p>
+
+<input type="number" id="number" placeholder="Enter a number">
+
+<button onclick="checkPalindrome()">Check</button>
+
+<p id="output"></p>
+
+<script>
+function checkPalindrome() {
+    let number = document.getElementById("number").value;
+
+    let reverse = number.split("").reverse().join("");
+
+    if (number === reverse) {
+        document.getElementById("output").innerHTML =
+            number + " is a Palindrome";
+    } else {
+        document.getElementById("output").innerHTML =
+            number + " is not a Palindrome";
+    }
+}
+</script>
+
+</body>
+</html>
