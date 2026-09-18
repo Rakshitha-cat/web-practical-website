@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+
+<h2>Feedback Form</h2>
+
+<form onsubmit="return validateFeedback()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    Feedback:
+    <textarea id="feedback"></textarea>
+    <br><br>
+
+    Rating:
+    <select id="rating">
+        <option value="">Select Rating</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Poor</option>
+        <option value="1">1 - Very Poor</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Submit Feedback</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateFeedback() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let feedback = document.getElementById("feedback").value;
+    let rating = document.getElementById("rating").value;
+
+    if (name == "") {
+        document.getElementById("message").innerHTML = "Enter your name";
+        return false;
+    }
+
+    if (email == "") {
+        document.getElementById("message").innerHTML = "Enter your email";
+        return false;
+    }
+
+    if (feedback == "") {
+        document.getElementById("message").innerHTML = "Enter your feedback";
+        return false;
+    }
+
+    if (rating == "") {
+        document.getElementById("message").innerHTML = "Select a rating";
+        return false;
+    }
+
+    document.getElementById("message").innerHTML = "Feedback submitted successfully!";
+    return false;
+}
+</script>
+
+</body>
+</html>

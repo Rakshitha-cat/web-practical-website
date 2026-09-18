@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events 05 - Bubbling and Capturing</title>
+</head>
+<body>
+
+<h2>Event Bubbling and Capturing</h2>
+
+<div id="parent" style="padding:30px; background:lightblue;">
+    Parent
+    <button id="child">Child Button</button>
+</div>
+
+<p id="message"></p>
+
+<script>
+let parent = document.getElementById("parent");
+let child = document.getElementById("child");
+let message = document.getElementById("message");
+
+parent.addEventListener("click", function() {
+    message.textContent = "Parent event - Bubbling";
+});
+
+child.addEventListener("click", function() {
+    message.textContent = "Child event";
+});
+
+parent.addEventListener("click", function() {
+    message.textContent += " | Parent event - Capturing";
+}, true);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events 02 - Keyboard Events</title>
+</head>
+<body>
+
+<h2>Keyboard Events</h2>
+
+<input type="text" id="input" placeholder="Type something">
+
+<p id="message"></p>
+
+<script>
+let input = document.getElementById("input");
+let message = document.getElementById("message");
+
+input.onkeydown = function() {
+    message.textContent = "Key is pressed";
+};
+
+input.onkeyup = function() {
+    message.textContent = "Key released";
+};
+</script>
+
+</body>
+</html>

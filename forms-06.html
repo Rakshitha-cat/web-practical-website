@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission</title>
+</head>
+<body>
+
+<h2>College Admission Form</h2>
+
+<form onsubmit="return admission()">
+
+    Student Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    Phone:
+    <input type="text" id="phone">
+    <br><br>
+
+    Course:
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="BCA">BCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value="BBA">BBA</option>
+    </select>
+
+    <br><br>
+
+    Percentage:
+    <input type="number" id="percentage">
+    <br><br>
+
+    <button type="submit">Apply</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function admission() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let course = document.getElementById("course").value;
+    let percentage = document.getElementById("percentage").value;
+
+    if (name == "" || email == "" || phone == "" || course == "" || percentage == "") {
+        document.getElementById("message").innerHTML = "Please fill all fields";
+        return false;
+    }
+
+    if (phone.length != 10) {
+        document.getElementById("message").innerHTML = "Enter a valid 10-digit phone number";
+        return false;
+    }
+
+    if (percentage < 35 || percentage > 100) {
+        document.getElementById("message").innerHTML = "Enter a valid percentage";
+        return false;
+    }
+
+    document.getElementById("message").innerHTML = "Admission form submitted successfully!";
+    return false;
+}
+</script>
+
+</body>
+</html>

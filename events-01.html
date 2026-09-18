@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events 01 - Mouse Events</title>
+</head>
+<body>
+
+<h2>Mouse Events</h2>
+
+<button id="btn">Click Me</button>
+
+<p id="message">Move or click the button</p>
+
+<script>
+let btn = document.getElementById("btn");
+let message = document.getElementById("message");
+
+btn.onclick = function() {
+    message.textContent = "Button clicked!";
+};
+
+btn.onmouseover = function() {
+    message.textContent = "Mouse is over the button";
+};
+
+btn.onmouseout = function() {
+    message.textContent = "Mouse left the button";
+};
+</script>
+
+</body>
+</html>

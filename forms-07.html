@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Validation</title>
+</head>
+<body>
+
+<h2>Dynamic Form Validation</h2>
+
+<form>
+
+    Name:
+    <input type="text" id="name" oninput="validateName()">
+    <span id="nameError"></span>
+
+    <br><br>
+
+    Email:
+    <input type="text" id="email" oninput="validateEmail()">
+    <span id="emailError"></span>
+
+    <br><br>
+
+    Password:
+    <input type="password" id="password" oninput="validatePassword()">
+    <span id="passwordError"></span>
+
+    <br><br>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateName() {
+    let name = document.getElementById("name").value;
+
+    if (name == "") {
+        document.getElementById("nameError").innerHTML = " Enter name";
+    } else {
+        document.getElementById("nameError").innerHTML = " Valid";
+    }
+}
+
+function validateEmail() {
+    let email = document.getElementById("email").value;
+
+    if (!email.includes("@")) {
+        document.getElementById("emailError").innerHTML = " Enter valid email";
+    } else {
+        document.getElementById("emailError").innerHTML = " Valid";
+    }
+}
+
+function validatePassword() {
+    let password = document.getElementById("password").value;
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerHTML = " Minimum 6 characters";
+    } else {
+        document.getElementById("passwordError").innerHTML = " Strong enough";
+    }
+}
+
+function submitForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (name == "" || !email.includes("@") || password.length < 6) {
+        document.getElementById("message").innerHTML = "Please correct the errors";
+    } else {
+        document.getElementById("message").innerHTML = "Form submitted successfully!";
+    }
+}
+</script>
+
+</body>
+</html>
