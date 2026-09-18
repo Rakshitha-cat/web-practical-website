@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 03 - Change CSS</title>
+</head>
+<body>
+
+<h2 id="heading">Change My Style</h2>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<script>
+function changeStyle() {
+    let heading = document.getElementById("heading");
+
+    heading.style.color = "blue";
+    heading.style.backgroundColor = "lightyellow";
+    heading.style.fontSize = "35px";
+    heading.style.padding = "20px";
+}
+</script>
+
+</body>
+</html>

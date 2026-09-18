@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 08 - Dynamic Table</title>
+</head>
+<body>
+
+<h2>Dynamic Table</h2>
+
+<button onclick="createTable()">Create Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function createTable() {
+
+    let table = document.createElement("table");
+
+    table.border = "1";
+    table.cellPadding = "10";
+
+    let header = table.insertRow();
+
+    header.insertCell().textContent = "Name";
+    header.insertCell().textContent = "Age";
+    header.insertCell().textContent = "Course";
+
+    let row1 = table.insertRow();
+
+    row1.insertCell().textContent = "Rahul";
+    row1.insertCell().textContent = "20";
+    row1.insertCell().textContent = "BCA";
+
+    let row2 = table.insertRow();
+
+    row2.insertCell().textContent = "Priya";
+    row2.insertCell().textContent = "21";
+    row2.insertCell().textContent = "B.Sc";
+
+    document.getElementById("tableContainer").appendChild(table);
+}
+</script>
+
+</body>
+</html>

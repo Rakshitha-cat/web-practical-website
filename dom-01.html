@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Add Element</title>
+</head>
+<body>
+
+<h2>DOM Manipulation</h2>
+
+<button onclick="addElement()">Add Element</button>
+
+<div id="box"></div>
+
+<script>
+function addElement() {
+    let p = document.createElement("p");
+    p.textContent = "New element added using JavaScript.";
+    document.getElementById("box").appendChild(p);
+}
+</script>
+
+</body>
+</html>

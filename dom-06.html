@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 06 - Query Selector</title>
+</head>
+<body>
+
+<h2 id="heading">Original Heading</h2>
+
+<p class="text">Paragraph 1</p>
+<p class="text">Paragraph 2</p>
+<p class="text">Paragraph 3</p>
+
+<button onclick="changeText()">Change</button>
+
+<script>
+function changeText() {
+    let heading = document.querySelector("#heading");
+    heading.textContent = "Changed using querySelector()";
+
+    let paragraphs = document.querySelectorAll(".text");
+
+    paragraphs.forEach(function(p) {
+        p.style.color = "green";
+    });
+}
+</script>
+
+</body>
+</html>

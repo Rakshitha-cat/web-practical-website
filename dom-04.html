@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 04 - Multiple Elements</title>
+</head>
+<body>
+<h2 id="heading">Heading</h2>
+<p id="para1">First paragraph</p>
+<p id="para2">Second paragraph</p>
+<button onclick="changeElements()">Change All</button>
+
+<script>
+function changeElements() {
+    document.getElementById("heading").textContent = "New Heading";
+    document.getElementById("para1").textContent = "First paragraph changed";
+    document.getElementById("para2").textContent = "Second paragraph changed";
+}
+</script>
+
+</body>
+</html>

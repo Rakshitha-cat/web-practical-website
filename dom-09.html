@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 09 - Table Rows</title>
+</head>
+<body>
+
+<h2>Add and Delete Table Rows</h2>
+
+<table border="1" cellpadding="10" id="studentTable">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<br>
+
+<button onclick="addRow()">Add Row</button>
+
+<script>
+function addRow() {
+
+    let table = document.getElementById("studentTable");
+
+    let row = table.insertRow();
+
+    let name = row.insertCell(0);
+    let course = row.insertCell(1);
+    let action = row.insertCell(2);
+
+    name.textContent = "Student";
+    course.textContent = "Computer Science";
+
+    let button = document.createElement("button");
+
+    button.textContent = "Delete";
+
+    button.onclick = function() {
+        row.remove();
+    };
+
+    action.appendChild(button);
+}
+</script>
+
+</body>
+</html>

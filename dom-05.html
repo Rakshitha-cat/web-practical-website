@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 05 - DOM Methods</title>
+</head>
+<body>
+
+<h2 id="heading">Hello</h2>
+
+<p class="message">Paragraph 1</p>
+<p class="message">Paragraph 2</p>
+<p class="message">Paragraph 3</p>
+
+<button onclick="changeText()">Change</button>
+
+<script>
+function changeText() {
+    let heading = document.getElementById("heading");
+    heading.textContent = "Changed using getElementById()";
+
+    let messages = document.getElementsByClassName("message");
+
+    for (let i = 0; i < messages.length; i++) {
+        messages[i].style.color = "blue";
+    }
+}
+</script>
+
+</body>
+</html>

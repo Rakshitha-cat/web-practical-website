@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigator Object</title>
+</head>
+<body>
+
+<h2>Navigator Object</h2>
+
+<button onclick="showNavigator()">Show Browser Information</button>
+
+<p id="result"></p>
+
+<script>
+function showNavigator() {
+    let text = "";
+
+    text += "Browser: " + navigator.appName + "<br>";
+    text += "Platform: " + navigator.platform + "<br>";
+    text += "Language: " + navigator.language + "<br>";
+    text += "Online: " + navigator.onLine;
+
+    document.getElementById("result").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

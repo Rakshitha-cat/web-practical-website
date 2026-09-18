@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 02 - Remove Elements</title>
+</head>
+<body>
+
+<h2>Remove HTML Elements Dynamically</h2>
+
+<p id="text">This paragraph will be removed.</p>
+
+<button onclick="removeElement()">Remove</button>
+
+<script>
+function removeElement() {
+    let element = document.getElementById("text");
+    element.remove();
+}
+</script>
+
+</body>
+</html>

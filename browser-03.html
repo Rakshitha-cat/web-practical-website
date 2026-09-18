@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Object</title>
+</head>
+<body>
+
+<h2>Location Object</h2>
+
+<p id="result"></p>
+
+<button onclick="showLocation()">Show Current URL</button>
+
+<br><br>
+
+<button onclick="goToGoogle()">Go to Google</button>
+
+<script>
+function showLocation() {
+    document.getElementById("result").innerHTML =
+        "Current URL: " + window.location.href;
+}
+
+function goToGoogle() {
+    window.location.href = "https://www.google.com";
+}
+</script>
+
+</body>
+</html>

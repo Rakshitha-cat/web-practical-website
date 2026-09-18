@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 13 - Dynamic Dropdown</title>
+</head>
+<body>
+
+<h2>Dynamic Dropdown List</h2>
+
+<select id="course"></select>
+
+<button onclick="addCourse()">Add Course</button>
+
+<script>
+let courses = ["HTML", "CSS", "JavaScript", "Python"];
+
+let dropdown = document.getElementById("course");
+
+courses.forEach(function(course) {
+
+    let option = document.createElement("option");
+
+    option.textContent = course;
+    option.value = course;
+
+    dropdown.appendChild(option);
+});
+
+function addCourse() {
+
+    let option = document.createElement("option");
+
+    option.textContent = "Node.js";
+    option.value = "Node.js";
+
+    dropdown.appendChild(option);
+}
+</script>
+
+</body>
+</html>

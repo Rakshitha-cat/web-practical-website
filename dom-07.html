@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM 07 - CSS Classes</title>
+
+    <style>
+        .highlight {
+            color: white;
+            background-color: blue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 id="heading">Dynamic CSS Class</h2>
+
+<button onclick="addClass()">Add Class</button>
+<button onclick="removeClass()">Remove Class</button>
+
+<script>
+function addClass() {
+    document.getElementById("heading").classList.add("highlight");
+}
+
+function removeClass() {
+    document.getElementById("heading").classList.remove("highlight");
+}
+</script>
+
+</body>
+</html>
